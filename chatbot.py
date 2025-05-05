@@ -34,12 +34,11 @@ if file is not None:
 #Break it into chunks
     text_splitter = RecursiveCharacterTextSplitter(
         separators="\n",
-        chunk_size=1000,
-        chunk_overlap=150,
+        chunk_size=500,
+        chunk_overlap=100,
         length_function=len
     )
     chunks = text_splitter.split_text(text)
-    #st.write(chunks)
 
 
     # generating embedding
@@ -60,7 +59,11 @@ if file is not None:
         llm = ChatOpenAI(
             openai_api_key = OPENAI_API_KEY,
             temperature = 0,
-            max_tokens = 1000,
+            #llm generates content. not pulling. as they generate.
+            # there can be randomness. its not wrong, just random. cud make answer lengthy.. so we define temperature.
+            # lower the value of temp, lesser than randomness. there is no right or wrong,
+
+            max_tokens = 1000,  ## defines the limit of the response... (eg: this cud be 750 words)
             model_name = "gpt-3.5-turbo"
         )
 
