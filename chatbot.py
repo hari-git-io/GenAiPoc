@@ -1,4 +1,4 @@
-# Need to install following pip install pypdf2 langchain faiss-cpu openai tiktoken streamlit
+# Need to install following pip install pypdf2 langchain faiss-cpu openai tiktoken streamlit langchain_community
 # to run locally : streamlit run C:\Users\harih\PycharmProjects\GenAiExample\chatbot.py
 
 # streamlit - lib for creating ui interfaces..no html, css needed..
@@ -15,9 +15,9 @@ from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain_community.chat_models import ChatOpenAI
 
-OPENAI_API_KEY = ""#Pass your key here
+#OPENAI_API_KEY = ""#Pass your key here
 #Upload PDF files
-st.header("My first Chatbot")
+st.header("Hari GPT :P ")
 
 with st.sidebar:
     st.title("Your Documents")
